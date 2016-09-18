@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1NC-uF-lPJ">
+                                <rect key="frame" x="0.0" y="40" width="320" height="179"/>
+                                <color key="backgroundColor" red="1" green="0.4941176471" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="179" id="yxq-VK-xZH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCH-nl-4uM">
+                                <rect key="frame" x="0.0" y="307" width="320" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="6zn-NB-XFO"/>
+                                </constraints>
+                                <state key="normal" title="确定生成Modal文件"/>
+                                <connections>
+                                    <action selector="ButtonOKClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gym-j4-Jak"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ModalName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aXK-Q6-6A5">
+                                <rect key="frame" x="0.0" y="223" width="320" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="hJu-Xe-VM6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="输入json数据" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aoP-rW-m8f">
+                                <rect key="frame" x="7" y="22" width="137" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="/Users/ptshan/Desktop" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pKk-BA-H2d">
+                                <rect key="frame" x="16" y="261" width="288" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="fo4-wd-9Qw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="aXK-Q6-6A5" secondAttribute="trailing" id="62P-ai-tKP"/>
+                            <constraint firstAttribute="trailing" secondItem="eCH-nl-4uM" secondAttribute="trailing" id="ESn-J3-JPG"/>
+                            <constraint firstItem="pKk-BA-H2d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="F5F-tm-aZg"/>
+                            <constraint firstItem="aXK-Q6-6A5" firstAttribute="top" secondItem="1NC-uF-lPJ" secondAttribute="bottom" constant="4" id="U6Z-Xk-8TL"/>
+                            <constraint firstItem="pKk-BA-H2d" firstAttribute="top" secondItem="aXK-Q6-6A5" secondAttribute="bottom" constant="4" id="VLC-Bu-uuP"/>
+                            <constraint firstItem="eCH-nl-4uM" firstAttribute="top" secondItem="pKk-BA-H2d" secondAttribute="bottom" constant="20" id="Wwj-pR-Xnf"/>
+                            <constraint firstAttribute="trailing" secondItem="1NC-uF-lPJ" secondAttribute="trailing" id="YBj-wC-fNA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pKk-BA-H2d" secondAttribute="trailing" id="gcI-Qa-OA4"/>
+                            <constraint firstItem="1NC-uF-lPJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hbJ-6D-6kZ"/>
+                            <constraint firstItem="eCH-nl-4uM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="j8G-lS-EC5"/>
+                            <constraint firstItem="aXK-Q6-6A5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mAd-M3-uZS"/>
+                            <constraint firstItem="1NC-uF-lPJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="40" id="zhM-oJ-1lB"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="TextView" destination="1NC-uF-lPJ" id="7rt-Ht-fuX"/>
+                        <outlet property="textFieldModalPath" destination="pKk-BA-H2d" id="Om1-83-EFN"/>
+                        <outlet property="textFieldName" destination="aXK-Q6-6A5" id="foz-p5-y9K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="372" y="227"/>
+        </scene>
+    </scenes>
+</document>
